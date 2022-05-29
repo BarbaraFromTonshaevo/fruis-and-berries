@@ -1,0 +1,119 @@
+.header{
+    &__container{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 30px 100px;
+    }
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-right: 50px;
+        border-right: 1px solid $grey;
+
+        &-text{
+            font-size: 11px;
+            font-family: 'Roboto';
+            color: $black;
+            transition: color .3s;
+        }
+        &:hover &-text{
+            color: $purple;
+        }
+
+        &-burger{
+            display: inline-block;
+            height: 14px;
+            width: 35px;
+            mask-image: url(../img/menu.svg);
+            -webkit-mask-image: url(../img/menu.svg);
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            background-color: $black;
+            transition: background-color .3s;
+        }
+        &:hover &-burger{
+            background-color: $purple;
+        }
+    }
+    &__contacts{
+        padding-left: 50px;
+        margin-right: auto;
+
+        &-tel{
+            font-weight: bold;
+            color: $black;
+            font-size: 16px;
+            transition: color .3s;
+
+            &:hover{
+                color: $purple;
+            }
+        }
+        &-description{
+            color: $grey;
+            font-size: 14px;
+        }
+    }
+    &__search{
+        height: fit-content;
+        padding-right: 50px;
+        border-right: 1px solid $grey;
+        margin-left: auto;
+
+        &-input{
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &-btn{
+            height: 25px;
+            width: 25px;
+            mask-image: url(../img/search.svg);
+            -webkit-mask-image: url(../img/search.svg);
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            background-color: $black;
+            transition: background-color .3s;
+
+            &:hover{
+                background-color: $purple;
+            }
+        }
+    }
+    &__basket{
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+        height: fit-content;
+
+        &-btn{
+            height: 28px;
+            width: 28px;
+            mask-image: url(../img/basket.svg);
+            -webkit-mask-image: url(../img/basket.svg);
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            background-color: $black;
+            transition: background-color .3s;
+            margin-right: 15px;
+
+            &:hover{
+                background-color: $purple;
+            }
+        }
+
+        &-number{
+            padding: 2px 5px;
+            color: white;
+            font-size: 10px;
+            line-height: 1;
+            background-color: $purple;
+            border-radius: 4px;
+        }
+
+
+    }
+}
+

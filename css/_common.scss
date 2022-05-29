@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Amatic SC';
+    src: url('AmaticSC-Bold.eot');
+    src: local('Amatic SC Bold'), local('AmaticSC-Bold'),
+        url('../fonts/AmaticSC-Bold.woff2') format('woff2'),
+        url('../fonts/AmaticSC-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amatic SC';
+    src: url('AmaticSC-Regular.eot');
+    src: local('Amatic SC Regular'), local('AmaticSC-Regular'),
+        url('../fonts/AmaticSC-Regular.woff2') format('woff2'),
+        url('../fonts/AmaticSC-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('RobotoCondensed-Regular.eot');
+    src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
+        url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('RobotoCondensed-Bold.eot');
+    src: local('Roboto Condensed'), local('RobotoCondensed-Bold'),
+        url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.eot');
+    src: local('Roboto'), local('RobotoCondensed'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    font-family: 'Roboto Condensed', serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.container{
+    margin: 0 auto;
+    padding: 100px;
+    max-width: 1340px;
+}

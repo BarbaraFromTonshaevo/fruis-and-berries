@@ -1,0 +1,169 @@
+.sections{
+    &__container{
+        padding-top: 40px;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 266px;
+        grid-gap: 30px;
+    }
+    &__hover{
+        position: absolute;
+        left: -600px;
+        top: -300px;
+        width: 850px;
+        height: 850px;
+        border-radius: 50%;
+        transform: translateX(-400px);
+        transition: transform .5s ease-out;
+
+        .sections__item:hover &{
+            transform: translateX(0px);
+        }
+    }
+    &__item{
+        position: relative;
+        box-shadow: 0 0 10px $light-grey;
+        padding: 40px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+
+
+        &-fruits{
+            background-image: url(../img/fruits.png);
+            background-position: 150% 10px;
+
+            grid-column: 1/3;
+            grid-row: 1/2;
+
+
+            & .sections__watch-link{
+                color: $purple;
+            }
+            & .sections__hover{
+                background-color: $purple;
+
+            }
+        }
+
+        &-vegetables{
+            background-image: url(../img/vegetables.png);
+            background-position: 80px 150%;
+
+            grid-column: 3/4;
+            grid-row: 1/3;
+
+            & .sections__watch-link{
+                color: $yellow;
+            }
+            & .sections__hover{
+                background-color: $yellow;
+                left: -250px;
+                top: -600px;
+                transform: translateX(0px) translateY(-400px);
+
+                .sections__item:hover &{
+                    transform: translateY(0px);
+                }
+            }
+
+        }
+        &-berries{
+            background-image: url(../img/berries.png);
+            background-position: 110px 50px;
+
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            & .sections__watch-link{
+                color: $red;
+            }
+            & .sections__hover{
+                background-color: $red;
+            }
+        }
+        &-juices{
+            background-image: url(../img/juices.png);
+            background-position: 200px 50px;
+
+            grid-column: 2/3;
+            grid-row: 2/3;
+
+            & .sections__watch-link{
+                color: $blue;
+            }
+            & .sections__hover{
+                background-color: $blue;
+            }
+        }
+    }
+
+    &__title{
+        position: relative;
+        font-family: 'Amatic SC';
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    &__text{
+        position: relative;
+        margin-bottom: 46px;
+    }
+
+    &__watch{
+        position: relative;
+        display: flex;
+
+        &-circle{
+            opacity: 0;
+            height: 48px;
+            width: 48px;
+            background-image: url(../img/circle.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: opacity .5s ease-out, transform .5s ease-out;
+            transform: translateX(-40px) rotate(-20deg);
+
+            .sections__item:hover &{
+                opacity: 1;
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+
+        &-arrow{
+            opacity: 0;
+            position: absolute;
+            top: 18px;
+            left: 12px;
+            height: 12px;
+            width: 12px;
+            background-image: url(../img/arrow.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: opacity .3s ease-out, transform .5s ease-out;
+            transform: translateX(-40px);
+            
+            .sections__item:hover &{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &-link{
+            position: absolute;
+            top: 17.5px;
+            left: 35px;
+            color: $purple;
+            transform: translateX(-35px);
+            transition: color .5s ease-out, transform .5s ease-out;
+
+            .sections__item:hover &{
+                opacity: 1;
+                color: white;
+                transform: translateX(0);
+            }
+        }
+    }
+
+}
