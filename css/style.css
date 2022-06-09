@@ -280,7 +280,21 @@ h1, h2, h3, h4, h5, h6, p {
   grid-gap: 30px;
 }
 
-.sections__hover {
+.sections__item {
+  cursor: pointer;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px #F2F2F2;
+          box-shadow: 0 0 10px #F2F2F2;
+  border-radius: 8px;
+  padding: 40px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  color: #052E43;
+}
+
+.sections__item::before {
+  content: '';
+  display: block;
   position: absolute;
   left: -600px;
   top: -300px;
@@ -295,20 +309,9 @@ h1, h2, h3, h4, h5, h6, p {
   transition: transform .5s ease-out, -webkit-transform .5s ease-out;
 }
 
-.sections__item:hover .sections__hover {
+.sections__item:hover::before {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-}
-
-.sections__item {
-  position: relative;
-  -webkit-box-shadow: 0 0 10px #F2F2F2;
-          box-shadow: 0 0 10px #F2F2F2;
-  border-radius: 8px;
-  padding: 40px;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  color: #052E43;
 }
 
 .sections__item-fruits {
@@ -326,7 +329,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #CEAFC8;
 }
 
-.sections__item-fruits .sections__hover {
+.sections__item-fruits::before {
   background-color: #CEAFC8;
 }
 
@@ -345,7 +348,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #FFD452;
 }
 
-.sections__item-vegetables .sections__hover {
+.sections__item-vegetables::before {
   background-color: #FFD452;
   left: -250px;
   top: -600px;
@@ -353,7 +356,7 @@ h1, h2, h3, h4, h5, h6, p {
           transform: translateX(0px) translateY(-400px);
 }
 
-.sections__item:hover .sections__item-vegetables .sections__hover {
+.sections__item:hover .sections__item-vegetables::before {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
@@ -373,7 +376,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #FC8663;
 }
 
-.sections__item-berries .sections__hover {
+.sections__item-berries::before {
   background-color: #FC8663;
 }
 
@@ -392,7 +395,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #88BCB9;
 }
 
-.sections__item-juices .sections__hover {
+.sections__item-juices::before {
   background-color: #88BCB9;
 }
 
@@ -400,10 +403,12 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   font-family: 'Amatic SC';
   font-size: 40px;
+  color: #052E43;
   margin-bottom: 5px;
 }
 
 .sections__text {
+  color: #052E43;
   position: relative;
   margin-bottom: 46px;
 }
