@@ -25,9 +25,11 @@
     &__item{
         position: relative;
         box-shadow: 0 0 10px $light-grey;
+        border-radius: 8px;
         padding: 40px;
         overflow: hidden;
         background-repeat: no-repeat;
+        color: $text;
 
 
         &-fruits{
@@ -157,6 +159,7 @@
             color: $purple;
             transform: translateX(-35px);
             transition: color .5s ease-out, transform .5s ease-out;
+            font-weight: bold;
 
             .sections__item:hover &{
                 opacity: 1;
