@@ -59,8 +59,14 @@
         padding-left: 50px;
         margin-right: auto;
 
+        &-item:not(:last-child){
+            margin-bottom: 5px;
+        }
+
         &-tel{
             cursor: pointer;
+            display: flex;
+            align-items: center;
             font-weight: bold;
             color: $black;
             font-size: 16px;
@@ -71,6 +77,8 @@
             }
         }
         &-description{
+            font-weight: normal;
+            margin-left: 12px;
             color: $grey;
             font-size: 14px;
         }
@@ -111,7 +119,6 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            margin-right: 15px;
 
             &:hover{
                 & .header__basket-icon path{
